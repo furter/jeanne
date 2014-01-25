@@ -1,0 +1,122 @@
+/* Fixes the initial browser’s style */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* FONTS */
+@font-face {
+    font-family:'Rosario';
+    src: url("font/Rosario-Regular.ttf");
+    font-style: normal;
+}
+@font-face {
+    font-family:'Rosario';
+    src: url("font/Rosario-Italic.ttf");
+    font-style: italic;
+}
+
+
+
+/* USING LESS: define variables to be re-used in different css parts and in operations */
+/* example: */
+/* @box-width: 350px; */
+/* .double-box { */
+/* width: 2 * @box-width; */
+/* } */
+
+
+
+body {
+    font-family:'Rosario';
+    font-size: 35px;
+    background-color: black;
+}
+.container {
+    margin-bottom: 50px;
+}
+
+p {
+    
+}
+
+a, a:visited, a:hover, a:active, a:link {
+    color:#000000; 
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+h1 {
+    font-family:'Cabin';
+    font-size: 16px;
+}
+
+.menuhover img {
+    position: absolute;
+}
+.menuhighlight {
+    display: none;
+}
+
+.content {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    margin: 15%
+}
+
+/*JEUX*/
+.cube {
+    position: absolute;
+}
+.cube p {
+    font-size: 25px;
+    position: absolute;
+    top: 35px; 
+    left: 0px;
+    z-index: 10;
+    text-align: center;
+    width: 100px;
+}
+.cube img {
+    width: 100px;
+}
+
+/*LIVRES*/
+
+
+/* IMAGES */
+.big-image {
+    margin: 10px 20px 20px 0px;
+    width: 700px;
+    height: 500px;
+    background-color: blue;
+}
+
+/*only on the screen*/
+
+@media screen {
+    .print-only {
+        display:none;
+    }
+}
+
+/*only in print*/
+
+@media print {
+    .screen-only {
+        display:none;
+    }
+}
