@@ -1,6 +1,6 @@
-<template name="livres">
+<template name="templateLivres">
 
-<div style="position: absolute; height: 600px; width: 800px; top: 50%; left: 50%; margin-top: -300px; margin-left: -400px; z-index:-1">
+<div class="books">
 
 <a href="/"><img src="/accueil/balle.png" class="draggable" style="position: fixed; width: 94px; bottom:40px; left: 250px"></a>
 
@@ -10,23 +10,31 @@
 <br>
 Livres<br><br>
 
-<!-- Fait appel à la function JavaScript Template.collective_editing.comments -->
-{{#each elements}}
-<a href="/platform/{{ category }}/{{ slug }}">
-<div class="box platform-medium-box">
-    <table class="table-platform">
-    <tr><td><p class="text-platform-category">{{ category }}</p></td><td class="platform-box-icon"><img src="/microBook.png"></td></tr></table>
-    <div class="platform-title">{{{ title }}}</div>
-       <p class="text-platform-content">{{{ summary }}}</p>
-       <img src="{{{ img-src }}}" class="platform-img-ellipsis">
-       <p class="text-platform-legend">{{{ legend }}}</p>
-</div></a>
+{{#each livres}}
+<a href="/livres/{{ titre }}">
+    <div>
+        <p>{{ titre }}</p>
+        <p>{{ date }}</p>
+        <img src="{{ image }}"/>
+    </div>
+</a>
 {{/each}}
 
-<img src="/livres/couv/Bonnes vacances Lou CV copie.jpg">
+<div class="bookshelf">
 
-<div style="border: 1px solid white; height: 700px; width: 500px"></div>
+<div class="book-cover-shelf"><img src="/livres/Filafil.jpg"></div>
+<div class="book-cover-shelf"><img src="/livres/ashbe_lou_et_mouf_il_fait_noir_couv.jpg"></div>
+<div class="book-cover-shelf"><img src="/livres/ashbe_lou&mouf_oulala.jpg"></div>
+<div class="book-cover-shelf"><img src="/livres/ashbe_non_couv.jpg"></div>
+<div class="book-cover-shelf"><img src="/livres/ashbe_non_pas_ca_lou_et_mou_couv.jpg"></div>
+<div class="book-cover-shelf"><img src="/livres/ashbe_que non je m habille.jpg"></div>
+<div class="book-cover-shelf"><img src="/livres/ashbe_tous_les_petits_couv.jpg"></div>
 
+</div>
+
+<div class="bibliography">
+    <br><br><br>
+Bibliographie<br><br>
 <a href="/filafil">Fil à fil   2013, Pastel - L’école des loisirs</a><br>
 Attends, petit éléphant !  2013, Pastel - L’école des loisirs   <br>
 Chut, un petit dort ici... 2012, Pastel - L’école des loisirs   <br>
@@ -121,7 +129,7 @@ Zipette et Pigolin. Le voyage de Zipette, 2011, Bayard <br>
 Pitipote au pays des bêtises , (illustration – texte de Claire Clément), 2009, Bayard   <br>
 Dans le jardin de ma main (illustration - texte de Françoise Bobe), 2007, Bayard<br>
 Sous le toit de mes doigts (illustration - texte de Françoise Bobe), 2006, Bayard<br>
-
+</div>
 
 </div>
 
