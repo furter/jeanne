@@ -67,6 +67,14 @@ h1 {
 .menu {
     background-color: black;
 }
+.menu-alt p {
+    text-align: center;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+.menu-alt {
+    padding-top: 10px;
+}
 
 .menuhover img {
     position: absolute;
@@ -80,6 +88,12 @@ h1 {
     padding: 20px;
     width: 70%;
     margin: 15%
+}
+
+/* TITRES */
+.titres-livres {
+    margin-left: -75px; 
+    left: 50%;
 }
 
 
@@ -155,3 +169,45 @@ h1 {
         display:none;
     }
 }
+
+
+@media screen and (min-width: 400px) {
+    .menu-alt {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .menu {
+        background-color: #495182;
+        visibility: hidden; 
+    }
+    .menu-alt {
+        visibility: visible;
+    }
+    .books {
+        position: relative; 
+        width: 100%;
+        top: 0; 
+        left: 0; 
+        margin-top: 20px; 
+        margin-left: 0px;
+    }
+    .book-cover-shelf {
+        float: none;
+        margin: auto;
+        
+    }
+    .titres-livres {
+        position: relative; 
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .bibliography {
+        width: 330px;
+        margin: auto;
+        font-size: 28px;
+    }
+}
+
