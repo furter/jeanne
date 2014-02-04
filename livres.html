@@ -1,28 +1,26 @@
 <template name="templateLivres">
 
+<a href="/"><img src="/accueil/balle.png" class="draggable" style="position: fixed; width: 94px; bottom:40px; left: 40px; z-index: 100"></a>
+
 <div class="books">
 
-<a href="/"><img src="/accueil/balle.png" class="draggable" style="position: fixed; width: 94px; bottom:40px; left: 250px"></a>
-
-
-<a href="/">Jeanne Ashbé</a>
-
-<br>
-Livres<br><br>
-
-{{#each livres}}
-<a href="/livres/{{ titre }}">
-    <div>
-        <p>{{ titre }}</p>
-        <p>{{ date }}</p>
-        <img src="{{ image }}"/>
-    </div>
-</a>
-{{/each}}
-
 <div class="bookshelf">
+<div style="width:100%">
+<img src="/titres/livres.png" style="width: 150px; margin-left: -75px; left: 50%"></div>
 
-<div class="book-cover-shelf"><img src="/livres/Filafil.jpg"></div>
+<div class="book-cover-shelf menuhover">
+    {{#each livres}}
+        <a href="/livres/{{ titre }}">
+            <div>
+                <img src="{{ image }}"/>
+            </div>
+            <div class="biblio-legende menuhighlight">
+                <p>{{ titre }}</p>
+                <p>{{ date }}</p>
+            </div>
+        </a>
+    {{/each}}
+</div>
 <div class="book-cover-shelf"><img src="/livres/ashbe_lou_et_mouf_il_fait_noir_couv.jpg"></div>
 <div class="book-cover-shelf"><img src="/livres/ashbe_lou&mouf_oulala.jpg"></div>
 <div class="book-cover-shelf"><img src="/livres/ashbe_non_couv.jpg"></div>
@@ -131,6 +129,7 @@ Dans le jardin de ma main (illustration - texte de Françoise Bobe), 2007, Bayar
 Sous le toit de mes doigts (illustration - texte de Françoise Bobe), 2006, Bayard<br>
 </div>
 
+</div>
 </div>
 
 </template>
