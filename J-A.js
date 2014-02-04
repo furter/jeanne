@@ -21,7 +21,12 @@ if (Meteor.isClient) {
         },
         render: function (templateName, context) {
             console.log(templateName, context);
-
+            
+            // BACKGROUND COLOR ON PAGES LIVRES
+            if (templateName.indexOf("main") === 0) {
+                $('body').addClass('menu');
+            }
+            
             Session.set('currentPage', templateName);
             var frag = Meteor.render(function () {
                 var i = Template[templateName] ? Template[templateName](context) : "";

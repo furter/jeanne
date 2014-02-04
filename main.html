@@ -1,10 +1,14 @@
 <template name="main">
 
+<!--
+<img src="/Accueil.jpg" style="position: absolute; top:0px; right: -113px; width: 1605px; z-index:-1">-->
+
+
 <img id="volant" src="/accueil/avion.png" class="draggable" style="position: absolute; width: 470px; top:40px; left: 50px">
 
-<div style="position: absolute; height: 600px; width: 800px; top: 50%; left: 50%; margin-top: -300px; margin-left: -400px; z-index:-1; background-color: #495182">
+<div style="position: absolute; height: 625px; width: 800px; top: 50%; left: 50%; margin-top: -315px; margin-left: -400px; z-index:-1; background-color: #495182">
 <!-- <img src="/accueil/tapis-blanc.svg" style="position: absolute; bottom: -140px; left: -150px"> -->
-<img src="/accueil/biblio-bleu.png" style="position: absolute; left: -350px; top: -50px; width: 1500px">
+<img src="/accueil/biblio-bleu.png" style="position: absolute; left: -410px; top: -50px; width: 1595px">
 
 
 <div class="menu">
@@ -12,51 +16,53 @@
 <!--
 <div style="background-color: #495182; width: 1000px; height: 800px; position: absolute; top:195px; right: 245px"></div>
 -->
-<div class="menuhover" style="position: absolute; width: 172px; height: 260px; top:195px; right: 245px">
+<div class="menuhover" style="position: absolute; width: 172px; height: 280px; top:217px; right: 260px">
     <a href="/affiches">
         <div class="menuhover" style="position: absolute; width: 172px; height: 200px; left: 0px; top: 0px; z-index:100"></div>
-        <img src="/accueil/affiches-bleu-texte.png" class="menuhighlight" style="width: 172px"><img src="/accueil/affiches-bleu.png" class="menubase" style="width: 172px">
+        <img src="/accueil/affiches-couleur-texte-FR.png" class="menuhighlight" style="width: 172px"><img src="/accueil/affiches-bleu.png" class="menubase" style="width: 172px">
     </a>
 </div>
 
 <div class="menuhover">
-    <a href="/videos"><img src="/accueil/TV-bleu-texte.png" class="menuhighlight" style="width: 150px; top:45px; right: 80px"><img src="/accueil/TV-bleu.png" class="menubase" style="width: 150px; top:45px; right: 80px">
+    <a href="/videos"><img src="/accueil/TV-bleu-texte.png" class="menuhighlight" style="width: 160px; top:50px; right: 82px"><img src="/accueil/TV-bleu.png" class="menubase" style="width: 160px; top:50px; right: 82px">
     </a>
 </div>
 
 <div class="menuhover">
-    <a href="/jeux"><img src="/accueil/girafe-couleur-bleu-texte.png" class="menuhighlight" style="width: 235px; top:190px; left: 60px"><img src="/accueil/girafe-bleu.png" class="menubase" style="width: 235px; top:190px; left: 60px">
+    <a href="/jeux"><img src="/accueil/girafe-couleur-blanc-texte.png" class="menuhighlight" style="width: 220px; top:165px; left: 20px"><img src="/accueil/girafe-bleu.png" class="menubase" style="width: 220px; top:165px; left: 20px">
     </a>
 </div>
 
 <div class="menuhover">
-    <a href="/"><img src="/accueil/maison-bleu.png" style="width: 155px; top:425px; right: 60px">
+    <a href="/"><img src="/accueil/maison-couleur-texte.png" class="menuhighlight" style="width: 290px; top:450px; right: 50px"><img src="/accueil/maison-bleu.png" class="menubase"  style="width: 290px; top:450px; right: 50px">
     </a>
 </div>
 
 <div class="menuhover">
-    <a href="/expos"><img src="/accueil/camion-bleu-texte.png" class="menuhighlight" style="width: 198px; top:350px; left: 182px;"><img src="/accueil/camion-bleu.png" class="menubase" style="width: 198px; top:350px; left: 182px">
+    <a href="/expos">
+<img src="/accueil/camion-couleur-texte-FR.png" class="menuhighlight" style="width: 210px; top:350px; left: 150px;">
+<img src="/accueil/camion-bleu.png" class="menubase" style="width: 210px; top:350px; left: 150px">
     </a>
 </div>
 
 <div class="menuhover">
-    <a href="/bio"><img src="/accueil/poupee-texte.png" class="menuhighlight" style="width: 185px; top:85px; right: 276px"><img src="/accueil/poupee-bleu.png" class="menubase" style="width: 185px; top:85px; right: 276px">
+    <a href="/bio"><img src="/accueil/poupee-texte.png" class="menuhighlight" style="width: 197px; top:95px; right: 290px"><img src="/accueil/poupee-bleu.png" class="menubase" style="width: 197px; top: 95px; right: 290px">
     </a>
 </div>
 
 <div class="menuhover">
-    <a href="/livres"><img src="/accueil/livres-bleu-texte.png" class="menuhighlight" style="width: 150px; top:190px; right: 60px"><img src="/accueil/livres-bleu.png" class="menubase" style="width: 150px; top:190px; right: 60px;">
+    <a href="/livres"><img src="/accueil/livres-bleu-texte.png" class="menuhighlight" style="width: 152px; top:210px; right: 70px"><img src="/accueil/livres-bleu.png" class="menubase" style="width: 152px; top:210px; right: 70px;">
     </a>
 </div>
 
 <div class="menuhover">
     <a href="/dessins">
-        <img src="/accueil/peintures-bleu-texte.png" class="menuhighlight" style="width: 150px; top:320px; right: 70px"><img src="/accueil/peinture-bleu.png" class="menubase" style="width: 150px; top:320px; right: 70px;">
+        <img src="/accueil/peintures-bleu-texte.png" class="menuhighlight" style="width: 152px; top:343px; right: 72px"><img src="/accueil/peinture-bleu.png" class="menubase" style="width: 152px; top:343px; right: 72px;">
     </a>
 </div>
 
 <div class="menuhover">
-    <a href="/presse"><img src="/accueil/presse-texte-pepillement.png" class="menuhighlight" style="width: 125px; top:210px; left: 240px"><img src="/accueil/presse-bleu.png" class="menubase" style="width: 125px; top:210px; left: 240px;">
+    <a href="/presse"><img src="/accueil/presse-texte-pepillement.png" class="menuhighlight" style="width: 140px; top:200px; left: 200px"><img src="/accueil/presse-bleu.png" class="menubase" style="width: 140px; top:200px; left: 200px;">
     </a>
 </div>
 
