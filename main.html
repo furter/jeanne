@@ -3,36 +3,75 @@
 <!--
 <img src="/Accueil.jpg" style="position: absolute; top:0px; right: -113px; width: 1605px; z-index:-1">-->
 
-<div class="menu-alt">
-    <p>Jeanne Ashbé</p>
-    <p>bio</p>
-    <a href="/livres"><p>livres</p></a>
-    <p>affiches</p>
-    <p>contact</p>
+
+<div class="select_language">
+    <ul>
+         <div class="en" lang="en">
+            <li class="fr"><a href="#fr">FR</a></li>
+        </div>
+        <div class="fr" lang="fr">
+            <li class="en"><a href="#en">EN</a></li>
+        </div>
+    </ul>
 </div>
+
+<div class="menu-alt">
+    <div class="fr" lang="fr">
+        <p>Jeanne Ashbé</p>
+        <p>bio</p>
+        <a href="/livres"><p>livres</p></a>
+        <p>affiches</p>
+        <p>contact</p>
+    </div>
+    <div class="en" lang="en">
+        <p>Jeanne Ashbé</p>
+        <p>bio</p>
+        <a href="/livres"><p>books</p></a>
+        <p>posters</p>
+        <p>contact</p>
+    </div>
+        <div class="select_language" style="color:white">
+        <ul>
+             <div class="en" lang="en">
+                <li class="fr"><a href="#fr">FR</a></li>
+            </div>
+            <div class="fr" lang="fr">
+                <li class="en"><a href="#en">EN</a></li>
+            </div>
+        </ul>
+    </div>
+</div>
+
 
 
 <img id="volant" src="/accueil/avion.png" class="draggable" style="position: absolute; width: 470px; top:40px; left: 50px">
 
-<div style="position: absolute; height: 625px; width: 800px; top: 50%; left: 50%; margin-top: -315px; margin-left: -400px; z-index:-1; background-color: #495182">
+<div class="carre-bleu">
+
 <!-- <img src="/accueil/tapis-blanc.svg" style="position: absolute; bottom: -140px; left: -150px"> -->
 <img src="/accueil/biblio-bleu.png" style="position: absolute; left: -410px; top: -50px; width: 1595px">
 
 
 <div class="menu">
 
-<!--
-<div style="background-color: #495182; width: 1000px; height: 800px; position: absolute; top:195px; right: 245px"></div>
--->
+
 <div class="menuhover" style="position: absolute; width: 172px; height: 280px; top:217px; right: 260px">
     <a href="/affiches">
         <div class="menuhover" style="position: absolute; width: 172px; height: 200px; left: 0px; top: 0px; z-index:100"></div>
-        <img src="/accueil/affiches-couleur-texte-FR.png" class="menuhighlight" style="width: 172px"><img src="/accueil/affiches-bleu.png" class="menubase" style="width: 172px">
+        <div class="fr" lang="fr"><img src="/accueil/affiches-couleur-texte-FR.png" class="menuhighlight" style="width: 172px"></div>
+        <div class="en" lang="en"><img src="/accueil/affiches-couleur-texte-EN.png" class="menuhighlight" style="width: 172px"></div>
+        <img src="/accueil/affiches-bleu.png" class="menubase" style="width: 172px">
+    </a>
+</div>
+
+
+<div class="menuhover">
+    <a href="/videos"><img src="/accueil/TV-couleur-texte.png" class="menuhighlight" style="width: 160px; top:43px; right: 160px"><img src="/accueil/TV-bleu.png" class="menubase" style="width: 160px; top:43px; right: 160px;">
     </a>
 </div>
 
 <div class="menuhover">
-    <a href="/videos"><img src="/accueil/TV-bleu-texte.png" class="menuhighlight" style="width: 160px; top:50px; right: 82px"><img src="/accueil/TV-bleu.png" class="menubase" style="width: 160px; top:50px; right: 82px">
+    <a href="/presse"><img src="/accueil/tigre-couleur-FR.png" class="menuhighlight" style="width: 160px; top:50px; right: 10px"><img src="/accueil/tigre-bleu.png" class="menubase" style="width: 160px; top:50px; right: 10px">
     </a>
 </div>
 
@@ -42,41 +81,56 @@
 </div>
 
 <div class="menuhover">
-    <a href="/"><img src="/accueil/maison-couleur-texte.png" class="menuhighlight" style="width: 290px; top:450px; right: 50px"><img src="/accueil/maison-bleu.png" class="menubase"  style="width: 290px; top:450px; right: 50px">
+    <a href="/">
+        <div class="fr" lang="fr"><img src="/accueil/maison-couleur-texte.png" class="menuhighlight" style="width: 290px; top:450px; right: 50px"></div>
+        <div class="en" lang="en"><img src="/accueil/maison-couleur-texteEN.png" class="menuhighlight" style="width: 290px; top:450px; right: 50px"></div>
+        <img src="/accueil/maison-bleu.png" class="menubase"  style="width: 290px; top:450px; right: 50px">
     </a>
 </div>
 
 <div class="menuhover">
     <a href="/expos">
-<img src="/accueil/camion-couleur-texte-FR.png" class="menuhighlight" style="width: 210px; top:350px; left: 150px;">
+<div class="fr" lang="fr"><img src="/accueil/camion-couleur-texte-FR.png" class="menuhighlight" style="width: 210px; top:350px; left: 150px;"></div>
+<div class="en" lang="en"><img src="/accueil/camion-couleur-texte.png" class="menuhighlight" style="width: 210px; top:350px; left: 150px;"></div>
 <img src="/accueil/camion-bleu.png" class="menubase" style="width: 210px; top:350px; left: 150px">
     </a>
 </div>
 
 <div class="menuhover">
-    <a href="/bio"><img src="/accueil/poupee-texte.png" class="menuhighlight" style="width: 197px; top:95px; right: 290px"><img src="/accueil/poupee-bleu.png" class="menubase" style="width: 197px; top: 95px; right: 290px">
+    <a href="/bio">
+        <div class="fr" lang="fr"><img src="/accueil/poupee-couleur-texteFR.png" class="menuhighlight" style="width: 197px; top:95px; right: 290px"></div>
+        <div class="en" lang="en"><img src="/accueil/poupee-couleur-texteEN.png" class="menuhighlight" style="width: 197px; top:95px; right: 290px"></div>
+        <img src="/accueil/poupee-bleu.png" class="menubase" style="width: 197px; top: 95px; right: 290px">
     </a>
 </div>
 
 <div class="menuhover">
-    <a href="/livres"><img src="/accueil/livres-bleu-texte.png" class="menuhighlight" style="width: 152px; top:210px; right: 70px"><img src="/accueil/livres-bleu.png" class="menubase" style="width: 152px; top:210px; right: 70px;">
+    <a href="/livres">
+        <div class="fr" lang="fr"><img src="/accueil/livres-couleur-texteFR.png" class="menuhighlight" style="width: 152px; top:210px; right: 70px"></div>
+        <div class="en" lang="en"><img src="/accueil/livres-couleur-texteEN.png" class="menuhighlight" style="width: 152px; top:210px; right: 70px"></div>
+        <img src="/accueil/livres-bleu.png" class="menubase" style="width: 152px; top:210px; right: 70px;">
     </a>
 </div>
 
 <div class="menuhover">
     <a href="/dessins">
-        <img src="/accueil/peintures-bleu-texte.png" class="menuhighlight" style="width: 152px; top:343px; right: 72px"><img src="/accueil/peinture-bleu.png" class="menubase" style="width: 152px; top:343px; right: 72px;">
+        <img src="/accueil/peintures-couleur-texteFR.png" class="menuhighlight" style="width: 152px; top:343px; right: 72px">
+        <img src="/accueil/peinture-bleu.png" class="menubase" style="width: 152px; top:343px; right: 72px;">
     </a>
 </div>
 
 <div class="menuhover">
-    <a href="/presse"><img src="/accueil/presse-texte-pepillement.png" class="menuhighlight" style="width: 140px; top:200px; left: 200px"><img src="/accueil/presse-bleu.png" class="menubase" style="width: 140px; top:200px; left: 200px;">
+    <a href="/news">
+        <div class="fr" lang="fr"><img src="/accueil/news-couleur-texte.png" class="menuhighlight" style="width: 125px; top:200px; left: 200px"></div>
+        <div class="en" lang="en"><img src="/accueil/news-couleur-texte.png" class="menuhighlight" style="width: 125px; top:200px; left: 200px"></div>
+        <img src="/accueil/news-bleu.png" class="menubase" style="width: 125px; top:200px; left: 200px;">
     </a>
 </div>
 
 <a href="/"><img src="/accueil/balle.png" style="position: absolute; width: 94px; bottom: -30px; left: -45px"></a>
 
 </div>
+
 
 </div> <!-- end first div -->
 
