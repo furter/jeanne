@@ -11,3 +11,5 @@ less
 backbone
 jquery
 underscore
+accounts-base
+accounts-password

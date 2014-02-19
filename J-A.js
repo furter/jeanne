@@ -98,6 +98,13 @@ if (Meteor.isClient) {
                 $(this).find(".menuhighlight").hide();
                 $(this).find(".menubase").show();
             });
+            
+            $("form.login-form button.submit").on("click", function(){
+                var user = "jeanne";
+                var password = $("input#password").val()
+                Meteor.loginWithPassword(user, password)
+            });
+            
 
             // écrire les trucs ici!! on est encore dans document ready
         });
