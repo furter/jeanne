@@ -69,7 +69,7 @@ p {
 
 a, a:visited, a:active, a:link { 
     text-decoration: none;
-    color: black;
+    color: white;
 }
 a:hover {
     color: white; 
@@ -92,7 +92,11 @@ h1 {
 }
 
 .menu {
-    background-color: black;
+    
+}
+.menu-alt {
+    padding-top: 10px;
+    width: 100%;
 }
 .menu-alt p {
     text-align: center;
@@ -103,9 +107,6 @@ h1 {
     text-align: center;
     padding-top: 10px;
     text-transform: uppercase;
-}
-.menu-alt {
-    padding-top: 10px;
 }
 
 .menuhover img {
@@ -160,6 +161,17 @@ h1 {
 
 
 /*LIVRES*/
+.bouton-livres-biblio-off {
+    color: black;
+}
+
+.bouton-livres-biblio:hover span{
+    color: white;
+}
+.bouton-livres-liste:hover span{
+    color: white;
+}
+
 @bookswidth: 210px;
 @shelfheight: 300px;
 
@@ -167,7 +179,7 @@ h1 {
     position: absolute; 
     width: 800px;
     left: 50%; 
-    margin-top: 180px;
+    margin-top: 0px;
     margin-left: -400px;
     padding-bottom: 100px;
     padding-left: 50px;
@@ -175,6 +187,7 @@ h1 {
 }
 .bookshelf {
     clear: both;
+    padding-top:30px;
 }
 .bookshelf img {
     width: @bookswidth;
@@ -200,6 +213,8 @@ h1 {
     width: 100%;
     clear: both;
     padding-bottom: 50px;
+    padding-top:50px;
+    font-size: 30px;
 }
 .biblio-legende {
     position: absolute;
@@ -232,20 +247,38 @@ h1 {
 /*only in print*/
 
 @media print {
-    .screen-only {
+    .no-print {
         display:none;
     }
-}
-
-
-@media screen and (min-width: 400px) {
-    .menu-alt {
-        display: none;
+    .bibliography {
+        font-size: 16px;
+        color: black;
+    }
+    .bibliography a {
+        font-size: 16px;
+        color: black;
     }
 }
 
+/* BIG SCREENS ONLY (COMPUTERS) */
+
+@media screen and (min-width: 400px) {
+    .small-screen-only {
+        display: none;
+    }
+    .menu-alt {
+        visibility: hidden;
+        position: absolute;
+        left:-1000;
+    }
+}
+
+/* SMALL SCREENS ONLY (SMARTPHONES) */
 
 @media screen and (max-width: 400px) {
+    .big-screen-only {
+        display: none;
+    }
     .menu {
         background-color: #495182;
         visibility: hidden; 
@@ -297,4 +330,3 @@ h1 {
         font-size: 35px;
     }
 }
-
