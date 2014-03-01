@@ -4,23 +4,22 @@
 
 <div class="titre-menu">
 <div style="color: white; text-align: center">
-<img src="/titres/livres.svg" style="width: 150px; margin: 80px 0 80px 0"><br>
-</div>
+<img src="/titres/livres.svg" class="titre-livres"></div>
 </div>
 
 
 
 <div class="books">
 
-<div class="bouton-livres-biblio" style="width: 270px; height: 30px; text-align: right; float: left; margin-left: 70px; margin-right: 10px;"><span>bibliothèque</span>
-<img src="/titres/livres-biblio.svg" style="width: 30px; margin-left: 10px; margin-bottom: -8px"></div>
-<div class="bouton-livres-liste" style="width: 270px; height: 30px; text-align: left; float: left; margin-left: 10px">
-<a href="/bibliographie"><img src="/titres/livres-liste.svg" style="width: 30px; margin-right: 15px; margin-bottom: -10px"><span class="bouton-livres-biblio-off">bibliographie</span></a></div>
+<div class="bouton-livres-biblio"><span>bibliothèque</span>
+<img src="/titres/livres-biblio.svg"></div>
+<div class="bouton-livres-liste">
+<a href="/bibliographie"><img src="/titres/livres-liste.svg"><span class="bouton-livres-biblio-off">bibliographie</span></a></div>
 
 
 <div class="bookshelf">
 
-<div class="book-cover-shelf menuhover">
+<div class="book-cover-shelf menuhover" style="display: none">
     {{#each livres}}
         <a href="/livres/{{ titre }}">
             <div>
@@ -34,6 +33,7 @@
     {{/each}}
 </div>
 
+<a href="/filafil"><div class="book-cover-shelf"><img src="/livres/couv/couv-fil_a_fil.jpg"></div></a>
 <div class="book-cover-shelf"><img src="/livres/couv/couv-attends_petit_elephant.jpg"></div>
 <div class="book-cover-shelf"><img src="/livres/couv/couv-cher_pere_noel.jpg"></div>
 <div class="book-cover-shelf"><img src="/livres/couv/couv-et_apres.jpg"></div>

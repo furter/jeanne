@@ -26,6 +26,18 @@ if (Meteor.isClient) {
             if (templateName.indexOf("main") === 0) {
                 $('body').addClass('menu');
             }
+            if (templateName.indexOf("bibliographie") === 0) {
+                $('body').addClass('background-blue');
+            }
+            if (templateName.indexOf("bio") === 0) {
+                $('body').addClass('background-blue');
+            }
+            if (templateName.indexOf("presse") === 0) {
+                $('body').addClass('background-blue');
+            }
+            if (templateName.indexOf("filafil") === 0) {
+                $('body').addClass('background-blue');
+            }
             
             Session.set('currentPage', templateName);
             var frag = Meteor.render(function () {
@@ -105,7 +117,29 @@ if (Meteor.isClient) {
                 Meteor.loginWithPassword(user, password)
             });
             
-
+            
+            // SLIDING IMAGES
+            
+            $('.sp').first().addClass('active');
+            $('.sp').hide();    
+            $('.active').show();
+            
+                $('.sp').click(function(){
+            
+                $('.active').removeClass('active').addClass('oldActive');    
+                               if ( $('.oldActive').is(':last-child')) {
+                    $('.sp').first().addClass('active');
+                    }
+                    else{
+                    $('.oldActive').next().addClass('active');
+                    }
+                $('.oldActive').removeClass('oldActive');
+                $('.sp').fadeOut(0);
+                $('.active').fadeIn(0);
+                    
+                    
+                });
+                
             // écrire les trucs ici!! on est encore dans document ready
         });
 
