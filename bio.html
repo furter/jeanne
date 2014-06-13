@@ -1,62 +1,44 @@
 <template name="bio">
-<div class="select_language">
-    <ul>
-         <div class="en" lang="en">
-            <li class="fr"><a href="#fr">FR</a></li>
-        </div>
-        <div class="fr" lang="fr">
-            <li class="en"><a href="#en">EN</a></li>
-        </div>
-    </ul>
+
+<div id="container" class="clearfix">
+    {{> menu }}
 </div>
 
-<a href="/"><img src="/accueil/balle.png" class="draggable" style="position: fixed; width: 94px; bottom:40px; left: 40px; z-index: 100"></a>
-
-
-
-
-<div class="titres"><img src="/titres/bio-black.svg" style="width: 85%; margin-left: 20px"></div>
+<div class="fondsblanc"></div>
 
 <div class="contenu-centre bio">
 
-<div class="fr" lang="fr">
-La vie de Jeanne Ashbé est depuis toujours pleine d'enfants.<br>
-Elle grandit dans une famille nombreuse, remplie d'amis, de cousins, de jeux, de fou rires et de disputes !<br><br>
-Elle fait des études universitaires qui la mènent au Québec où elle travaille comme thérapeute du langage dans un très grand hôpital pour les enfants.<br><br>
-A son retour en Belgique, elle met au monde une fille puis un garçon... Elle part habiter à la campagne et commence à illustrer des livres... d'école! Mais très vite, ce sont ses propres textes qu’elle met en images.<br>
-Elle a toujours dessiné et a la passion des couleurs: dans sa maison, chaque pièce a une couleur différente et il y a partout des bouts de tissu qui traînent et font des taches colorées par-ci par-là, comme dans ses livres...<br><br>
-Elle a finalement eu cinq enfants qui n'arrêtent pas de grandir...et même des petits-enfants, tout nouvellement arrivés! Elle cuisine souvent pour beaucoup de monde et joue du violoncelle...<br><br>
-Elle est, à ce jour, l'auteur et l'illustratrice d'une soixantaine d'albums dont une grande partie s'adresse aux tout petits enfants.<br>
-Elle travaille aussi pour la presse et anime des formations à la lecture aux tout-petits.<br><br>
-Elle a obtenu de nombreux prix en Europe, en Asie et aux Etats-Unis et ses livres sont traduits dans une douzaine de langues.<br>
+<div class="fr" lang="fr"><img src="/accueil/poupee-couleur-texteFR.png" style="position: absolute; width: 197px; top:120px; right: 130px"></div>
+        <div class="en" lang="en"><img src="/accueil/poupee-couleur-texteEN.png" style="width: 197px; top:120px; right: 130px"></div>
+
+<div class="titres"><img src="/titres/bio-black.svg" style="width: 85%; margin-left: 20px; margin-bottom: -80px; margin-top: -40px"></div>
+
+<div style="position: absolute; top: 450px; left: 200px">
+<a href="/vidéos" style="color:black"><p style="font-size: 45px">vidéos</p></a>
 </div>
-<div class="en" lang="en">
-Jeanne Ashbe has always lived surrounded by children. She grew up with a big family, in a house full of friends. <br>
-She studied in Belgium, then in Quebec, where she worked as a language therapist in a big children's hospital.<br><br>
-On her return to Belgium, she gave birth to a daughter and moved to the countryside. After the birth of her second baby, a boy, she started her carrier as an illustrator, illustrating...school books! Then very soon, her own stories.<br><br>
 
-She has always drawn and has a passion for colours. At home, the doors of each room have a different colour, and her wardrobes are full of beautiful fabrics, which she buys here and there. <br><br>
-
-But Jeanne hasn't have much time for sewing...She plays the cello, has now five children who keep growing up and even now… three little new grand-sons !
-She has so far written and illustrated over sixty books, most of them for babies and toddlers. She also works for magazines and provides professional trainings in reading-for-the-very-young schemes. <br><br>
-
-Jeanne has won many prizes throughout the Europe, Asia and North America and her books are translated in a dozen of languages.
-
-
+<div style="position: absolute; top: 200px; left: 150px">
+<a href="/bio-photos" style="color:black"><p style="font-size: 30px">photos</p></a>
 </div>
-<img src="/bio/jeanne-ashbe.jpg" style="width:500px; margin: 40px 0 10px 0;">
-<p style="font-size: 20px">Photo Eric Garault</p>
 
-
-<p style="color: white; text-align: center; padding: 40px 0 40px 0;">liens</p>
-
-<div class="links-black">
-<a href="/nourrissons-bb">Nourrissons les bébés, avec Jeanne Ashbé, Sophie Chérer, Pastel</a><br>
-<a href="http://www.franceculture.fr/emission-jusqu-a-la-lune-et-retour-jeanne-ashbe-delicieuse-auteur-illustratrice-jeunesse-des-tout--0">France Culture</a><br>
-<a href="http://www.ricochet-jeunes.org/invites/invite/19-jeanne-ashbe">Ricochet Jeunes</a><br>
-<a href="http://www.declic-impro.fr/img_presse/StrasbourgMagazine_juil-aout2011.pdf">Strasbourg Magazine</a><br>
-<a href="http://evene.lefigaro.fr/livres/livre/jeanne-ashbe-tous-les-petits-32220.php?critiques#critique-evene">Le Figaro</a>
+<div style="position: absolute; top: 250px; left: 280px">
+<a href="/bio-texte" style="color:black"><p style="font-size: 35px; line-height: 45px">biographie</p></a>
 </div>
+
+<!--
+<div style="position: absolute; top: 180px; left: 260px">
+<a href="/bio-people" style="color:black"><p style="position: absolute; margin-top: 110px; margin-left: 10px; text-align: center; width:300px">people</p></a>
+</div>
+-->
+
+<div style="position: absolute; top: 300px; left: 550px">
+<a href="/bio-dessins" style="color:black"><p style="font-size: 35px; line-height: 45px">mon<br>enfance</p></a>
+</div>
+
+<div style="position: absolute; top: 350px; left: 100px">
+<a href="/bio-articles" style="color:black"><p style="font-size: 30px"><span style="font-size: 45px">articles</span> et <span style="font-size: 45px">sites</span></p></a>
+</div>
+
 
 </div>
 

@@ -1,0 +1,85 @@
+<template name="bibliotheque">
+
+<div id="container" class="clearfix">
+    {{> menu }}
+</div>
+
+<div class="sous-menu-pages">
+    <div class="fr" lang="fr">
+        <a href="/livres"><img src="/titres/bibliotheque.svg" style="height: 35px"></a><br>
+        <a href="/livres-themes"><img src="/titres/themes.svg" style="height: 35px"></a><br>
+        <a href="/livres-catalogue"><img src="/titres/bibliographie.svg" style="height: 35px"></a><br>
+    </div>
+    <div class="en" lang="en">
+        <a href="/livres"><img src="/titres/bookshelf.svg" style="height: 35px"></a><br>
+        <a href="/livres-themes"><img src="/titres/themes.svg" style="height: 35px"></a><br>
+        <a href="/livres-catalogue"><img src="/titres/bibliographie.svg" style="height: 35px"></a><br>
+    </div>
+</div>
+
+
+<div class="fondsblanc"></div>
+
+<div class="bookshelf">
+
+<div class="titre-menu">
+<img src="/titres/livres.png" style="width: 150px">
+</div>
+
+<div class="book-cover-shelf menuhover" style="display: none">
+    {{#each livres}}
+        <a href="/livres/{{ titre }}">
+            <div>
+                <img src="{{ image }}"/>
+            </div>
+            <div class="biblio-legende menuhighlight">
+                <p>{{ titre }}</p>
+                <p>{{ date }}</p>
+            </div>
+        </a>
+    {{/each}}
+</div>
+
+<a href="/filafil"><div class="book-cover-shelf"><img src="/livres/couv/couv-fil_a_fil.jpg"></div></a>
+<div class="book-cover-shelf"><img src="/livres/couv/couv-attends_petit_elephant.jpg"></div>
+<div class="book-cover-shelf"><img src="/livres/couv/couv-cher_pere_noel.jpg"></div>
+<div class="book-cover-shelf"><img src="/livres/couv/couv-et_apres.jpg"></div>
+<div class="book-cover-shelf"><img src="/livres/couv/couv-et_dedans_il_y_a.jpg"></div>
+<div class="book-cover-shelf"><img src="/livres/couv/couv-et_pit_et_pat.jpg"></div>
+<div class="book-cover-shelf"><img src="/livres/couv/couv-la_terrible_question.jpg"></div>
+<div class="book-cover-shelf"><img src="/livres/couv/couv-non.jpg"></div>
+<div class="book-cover-shelf"><img src="/livres/couv/couv-chut.png"></div>
+<div class="book-cover-shelf"><img src="/livres/couv/couv-aurevoir.jpg"></div>
+<div class="book-cover-shelf"><img src="/livres/couv/couv-bonjour.jpg"></div>
+<div class="book-cover-shelf"><img src="/livres/couv/couv-a_ce_soir.jpg"></div>
+
+</div>
+
+
+<!---
+<div class="books">
+
+<div style="">
+<img src="/nuages.png" style="width:300px; position: absolute;">
+<a href="/livres-catalogue" style="color:black"><p style="position: absolute; margin-top: 90px; margin-left: 10px; text-align: center; width:300px">bibliothèque</p></a>
+</div>
+
+<div style="position: absolute; top: 70px; left: 360px">
+<img src="/nuages.png" style="width:300px; position: absolute;">
+<a href="/bibliographie" style="color:black"><p style="position: absolute; margin-top: 90px; margin-left: 10px; text-align: center; width:300px">bibliographie</p></a>
+</div>
+
+<div style="position: absolute; top: 280px; left: 150px">
+<img src="/nuages.png" style="width:300px; position: absolute;">
+<a href="/bibliographie" style="color:black"><p style="position: absolute; margin-top: 90px; margin-left: 10px; text-align: center; width:300px">séries</p></a>
+</div>
+
+</div>
+--->
+
+
+</div>
+
+
+</template>
+

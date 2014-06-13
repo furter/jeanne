@@ -1,26 +1,33 @@
 <template name="filafil">
 
 
-<a href="/"><img src="/accueil/balle.png" class="draggable" style="position: fixed; width: 94px; bottom:40px; left: 40px;"></a>
-
-<div class="titres menuhover" style="color: white; text-align: center">
-<img src="/titres/livre.svg" class="titre-livres menubase" style="position: relative">
-<a href="/livres"><img src="/titres/livres.svg" class="titre-livres menuhighlight" style="position: relative"></a>
+<div id="container" class="clearfix">
+    {{> menu }}
 </div>
-<div style="color: white; text-align: center; margin: auto; padding-bottom: 70px;">
+
+<div class="sous-menu-pages">
+    <a href=""><p>Fil à Fil</p></a>
+    <a href="#trads"><p>Traductions</p></a>
+    <a href="#makingof"><p>Making Of</p></a>
+    <a href="#videos"><p>Vidéos</p></a>
+    <a href="#presse"><p>Presse</p></a>
+    <a href="#secrets"><p>Petits secrets</p></a>
+</div>
+
+<div class="fondsblanc"></div>
+
+<div class="livres">
+
+<div style="text-align: center; padding-bottom: 150px; font-size: 50px">
 <p>Fil à Fil</p>
 </div>
 
-<div class="contenu-centre">
-
-<div class="livre-details">
-<div><img src="/livres/Filafil.jpg"></div>
-<div class="sp"><img src="/livres/filafil/Filafil4.jpg"></div>
-<div class="sp"><img src="/livres/filafil/Filafil11.jpg"></div>
+<div class="livre-cover">
+<img src="/livres/Filafil.jpg">
 </div>
 
+
 <p class="livre-details-texte">
-Âge : 3 à 5 ans<br>
 <a href="http://www.ecoledesloisirs.fr/php-edl/catalogues/fiche-livre-nvo.php?reference=E136427">L’École des Loisirs</a>, 2013<br>
 Collection : Pastel<br>
 11,50 €  (EAN13 : 9782211213912)<br>
@@ -29,13 +36,40 @@ Tout carton<br>
 Le cocon de Maman araignée repose bien à l’abri sur sa toile. Les bébés araignées vont bientôt sortir. Toute petite et bien attachée à son fil, la petite araignée part découvrir le monde. Ouh là! Ouf! Maman araignée remonte le fil dès qu’un danger surgit. Miam! Bébé araignée a faim mais l’oiseau aussi a faim. Ouf! Maman est encore là!
 </p>
 
+<div class="spreads">
+    <img src="/livres/filafil/Filafil4.jpg">
+    <img src="/livres/filafil/Filafil11.jpg">
+</div>
+
 
 <p style="color: white; text-align: center; padding-top: 50px; padding-bottom: 70px; clear: both">documents</p>
 
+<a id="trads"><div class="sections-livres">TRADUCTIONS</div></a>
 
-<iframe width="420" height="315" src="//www.youtube.com/embed/tMkFWP0Cvjk" frameborder="0" allowfullscreen></iframe>
-<iframe width="420" height="315" src="//www.youtube.com/embed/kiiuEvONFAc" frameborder="0" allowfullscreen></iframe>
-</div>
+<div class="livre-cover"><img src="/livres/Filafil.jpg"></div>
+
+<div style="clear: both">
+<a id="makingof"><div class="sections-livres">MAKING OF</div></a></div>
+Le cocon de Maman araignée repose bien à l’abri sur sa toile. Les bébés araignées vont bientôt sortir. Toute petite et bien attachée à son fil, la petite araignée part découvrir le monde. Ouh là! Ouf! Maman araignée remonte le fil dès qu’un danger surgit. Miam! Bébé araignée a faim mais l’oiseau aussi a faim. Ouf! Maman est encore là!
+<br>
+
+<a id="videos"><div class="sections-livres">VIDÉOS</div></a>
+
+
+<iframe width="640" height="480" src="//www.youtube.com/embed/tMkFWP0Cvjk" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="//www.youtube.com/embed/kiiuEvONFAc" frameborder="0" allowfullscreen></iframe>
+
+
+<a id="presse"><div class="sections-livres">PRESSE</div></a>
+
+Liens vers des sites?
+
+<a id="secrets"><div class="sections-livres">PETITS SECRETS</div></a>
+Le cocon de Maman araignée repose bien à l’abri sur sa toile. Les bébés araignées vont bientôt sortir. Toute petite et bien attachée à son fil, la petite araignée part découvrir le monde. Ouh là! Ouf! Maman araignée remonte le fil dès qu’un danger surgit. Miam! Bébé araignée a faim mais l’oiseau aussi a faim. Ouf! Maman est encore là!
+
+
+</div> <!-- end div livres -->
+
 
 
 </template>

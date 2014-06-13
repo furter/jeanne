@@ -44,6 +44,11 @@ div {
         padding: 5px;
     }
 }
+.logout {
+    font-family:'Rosario';
+    font-size: 18px;
+    padding: 5px;
+}
 
 
 /*     _____________   ____________  ___    __ 
@@ -55,15 +60,16 @@ div {
 
 
 body {
-    font-family:'Rosario';
-    font-size: 35px;
-    line-height: 39px;
-    background-color: black;
-    color: white;
-}
-.background-blue {
+    font-family:'Helvetica', 'Arial', sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    line-height: 35px;
     background-color: #495182;
     color: black;
+}
+.background-black {
+    background-color: black;
+    color: white;
 }
 .container {
     margin-bottom: 50px;
@@ -75,7 +81,7 @@ p {
 
 a, a:visited, a:active, a:link { 
     text-decoration: none;
-    color: white;
+    color: black;
 }
 a:hover {
     color: white; 
@@ -94,22 +100,76 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-family: 'Cabin';
+    font-family: 'Helvetica';
     font-size: 16px;
 }
-.select_language {
-    position: absolute;
-}
-.select_language li {
-    color: white;
-    margin: 20px;
-    font-size: 20px;
+li {
     list-style-type: none;
 }
 
+/* MENU ACCUEIL (DESSIN) */ 
 .menu {
     
 }
+.menuhover img {
+    position: absolute;
+}
+.menuhighlight {
+    display: none;
+}
+.carre-bleu {
+    position: fixed; 
+    height: 625px; 
+    width: 800px; 
+    top: 50%; 
+    left: 50%; 
+    margin-top: -315px; 
+    margin-left: -400px; 
+    z-index:-1; 
+    background-color: #495182;
+}
+/* LANGUAGE SELECTION */ 
+.select_language li {
+    font-size: 15px;
+    line-height: 20px;
+}
+/* MENU PAGES */ 
+.menu-pages {
+    text-transform: uppercase;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+.menu-pages a {
+    color: white;
+    line-height: 40px;
+}
+.menu-pages select_language li {
+    line-height: 40px;
+    font-size: 30px;
+}
+.box {
+    margin: 30px 0px 30px 30px;
+    position: relative;
+    padding: 20px;
+    color: white;
+}
+.titre-menu {
+    text-align: center;
+    padding: 0px 0px 60px 0px;
+}
+.sous-menu-pages {
+    position: fixed;  
+    top: 30px; 
+    right: 40px;
+    padding-top: 20px;
+    text-transform: uppercase;
+}
+.sous-menu-pages a {
+    color: white;
+}
+
+/* MENU RESPONSIVE */
 .menu-alt {
     padding-top: 10px;
     width: 100%;
@@ -127,32 +187,25 @@ h1 {
     padding-top: 10px;
     text-transform: uppercase;
 }
-
-.menuhover img {
+.menu-alt .select_language {
     position: absolute;
+    bottom: -60px;
+    right: -10px;
 }
-.menuhighlight {
-    display: none;
+.menu-alt .select_language li {
+    color: white;
+    margin: 10px;
+    font-size: 20px;
+    list-style-type: none;
 }
 
-.content {
+
+/*.content {
     float: left;
     padding: 20px;
     width: 70%;
     margin: 15%
-}
-
-.carre-bleu {
-    position: fixed; 
-    height: 625px; 
-    width: 800px; 
-    top: 50%; 
-    left: 50%; 
-    margin-top: -315px; 
-    margin-left: -400px; 
-    z-index:-1; 
-    background-color: #495182;
-}
+}/*
 
 /* TITRES */
 .titres {
@@ -167,61 +220,66 @@ h1 {
 
 .contenu-centre {
     position: absolute; 
+    height: 100%;
     width: 800px;
     left: 50%; 
     margin-left: -400px;
     padding-bottom: 100px;
     padding-left: 50px;
+    padding-right: 50px;
     img {
         width:700px;
         margin-top:20px;
     }
+    font-size: 25px;
+    line-height: 30px;
+}
+.menu-centre {
+    position: absolute; 
+    height: 100%;
+    width: 800px;
+    left: 50%; 
+    margin-left: -400px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 25px;
+    line-height: 30px;
+}
+.fondsblanc {
+    position: fixed;
+    height: 100%;
+    width: 800px;
+    left: 50%; 
+    margin-left: -400px;
+    background-color: white;
 }
 
 
 /*LIVRES*/
-.titre-livres {
-    width: 150px; 
-    margin: 80px 0 80px 0;
+.bibliotheque {
+    width: 800px;
+    height: 600px;
+    background-color: #495182;
+    margin: 30px 0px 30px 20%;
+    padding: 20px;
+    overflow-x: scroll;
 }
-.bouton-livres-biblio-off {
-    color: transparent;
-}
-.bouton-livres-biblio {
-    width: 270px;
-    height: 30px; 
-    text-align: right; 
-    float: left; 
-    margin-left: 70px; 
-    margin-right: 10px;
-}
-.bouton-livres-biblio img {
-    width: 30px; 
-    margin-left: 10px; 
-    margin-bottom: -8px;
-}
-.bouton-livres-biblio:hover span{
-    color: white;
-}
-.bouton-livres-liste{
-    width: 270px; 
-    height: 30px; 
-    text-align: left; 
-    float: left; 
-    margin-left: 10px;
-    color: white;
-}
-.bouton-livres-liste img{
-    width: 30px; 
-    margin-right: 15px; 
-    margin-bottom: -10px;
-}
-.bouton-livres-liste:hover span{
-    color: white;
+.series {
+    position: relative;
+    float: left;
+    background-color: #495182;
+    margin: 50px 10% 50px 50px;
+    padding: 20px;
+    width: 400px;
+    height: 600px;
+    border: 2px solid white;
+    overflow-y: scroll;
 }
 
-@bookswidth: 210px;
-@shelfheight: 300px;
+
+@bookswidth: 180px;
+@shelfheight: 250px;
 
 .books {
     position: absolute; 
@@ -233,8 +291,13 @@ h1 {
     padding-left: 50px;
 }
 .bookshelf {
-    clear: both;
-    padding-top: 50px;
+    position: absolute;
+    width: 800px; 
+    top: 0px; 
+    left: 50%; 
+    margin-left: -400px; 
+    padding-top: 80px;
+    padding-left: 50px;
 }
 .bookshelf img {
     width: @bookswidth;
@@ -244,7 +307,8 @@ h1 {
     width: @bookswidth;
     position: relative;
     float: left;
-    margin-right: 30px;
+    margin-right: 60px;
+    margin-bottom:50px;
 }
 .book-cover-shelf img{
     position: absolute;
@@ -257,11 +321,16 @@ h1 {
     padding-top: 50px;
 }
 .bibliography {
-    width: 100%;
-    clear: both;
-    padding-bottom: 50px;
-    padding-top: 50px;
-    font-size: 30px;
+    font-size: 25px;
+    line-height: 34px;
+    color: black;
+    position: absolute;
+    width: 800px; 
+    top: 50%; 
+    left: 50%; 
+    margin-top: -315px; 
+    margin-left: -400px; 
+    padding: 50px 30px 30px 50px;
 }
 .bibliography a {
     color: black;
@@ -280,7 +349,30 @@ h1 {
     font-size: 25px;
     letter-spacing: 2px;
 }
-.livre-details {
+.prix {
+    font-size: 15px; 
+    line-height: 18px;
+    padding-left: 20px;
+}
+/*PAGE LIVRE*/
+.livres {
+    font-size: 25px;
+    line-height: 34px;
+    color: black;
+    position: absolute;
+    width: 800px; 
+    top: 80px; 
+    left: 50%; 
+    margin-left: -400px; 
+    padding: 50px 30px 30px 50px;
+    a {
+        color: black;
+    }
+    a:hover {
+        color: black;
+    }
+}
+.livre-cover {
     float: left;
     padding-right: 30px;
 }
@@ -288,16 +380,20 @@ h1 {
     font-size: 28px;
     line-height: 32px;
     margin-top: 20px;
-    a {
-        color: black;
-    }
-    a:hover {
-        color: white;
-    }
 }
-.livre-details img {
+.livre-cover img {
     width: 300px;
     margin-bottom: 30px;
+}
+.spreads img {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 720px;
+}
+.sections-livres {
+    padding-top: 20px;
+    height: 100px;
+    clear: both;
 }
 
 /* LIENS */
@@ -319,6 +415,9 @@ h1 {
 @media screen {
     .print-only {
         display:none;
+    }
+    .printer-icon {
+        margin-top: -50px;
     }
 }
 

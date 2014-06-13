@@ -11,7 +11,7 @@ if (Meteor.isClient) {
     var Router = Backbone.Router.extend({
         routes: {
             '': 'main',
-                'livres': 'templateLivres',
+                'livres-catalogue': 'templateLivres',
                 //cette ligne doit être la dernière:
                 ':page': 'main',
         },
@@ -24,19 +24,13 @@ if (Meteor.isClient) {
             
             // BACKGROUND COLOR ON PAGES LIVRES
             if (templateName.indexOf("main") === 0) {
-                $('body').addClass('menu');
+                $('body').addClass('background-black');
             }
-            if (templateName.indexOf("bibliographie") === 0) {
-                $('body').addClass('background-blue');
+            if (templateName.indexOf("bio-videos") === 0) {
+                $('body').addClass('background-black');
             }
-            if (templateName.indexOf("bio") === 0) {
-                $('body').addClass('background-blue');
-            }
-            if (templateName.indexOf("presse") === 0) {
-                $('body').addClass('background-blue');
-            }
-            if (templateName.indexOf("filafil") === 0) {
-                $('body').addClass('background-blue');
+            if (templateName.indexOf("videos") === 0) {
+                $('body').addClass('background-black');
             }
             
             Session.set('currentPage', templateName);
@@ -113,10 +107,14 @@ if (Meteor.isClient) {
             
             $("form.login-form button.submit").on("click", function(){
                 var user = "jeanne";
-                var password = $("input#password").val()
-                Meteor.loginWithPassword(user, password)
+                var password = $("input#password").val();
+                Meteor.loginWithPassword(user, password);
             });
             
+            $("button.logout").on("click", function(){
+                console.log("ericooooooo");
+                Meteor.logout();
+            });
             
             // SLIDING IMAGES
             
