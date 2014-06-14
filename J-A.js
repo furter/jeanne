@@ -116,27 +116,19 @@ if (Meteor.isClient) {
                 Meteor.logout();
             });
             
-            // SLIDING IMAGES
+            // LIVRES ICONES
+            $(".hidden").hide();
+            $('.livre-button').click(function() {
+                var target = $(this).attr('id').replace('-toggle', '')
+                $(".livre-section").removeClass("active");
+                $(".livre-section").addClass("hidden");
+                $(".hidden").hide();
+                $("." + target).removeClass("hidden");
+                $("." + target).addClass("active");
+                $(".active").show();
+            });
             
-            $('.sp').first().addClass('active');
-            $('.sp').hide();    
-            $('.active').show();
             
-                $('.sp').click(function(){
-            
-                $('.active').removeClass('active').addClass('oldActive');    
-                               if ( $('.oldActive').is(':last-child')) {
-                    $('.sp').first().addClass('active');
-                    }
-                    else{
-                    $('.oldActive').next().addClass('active');
-                    }
-                $('.oldActive').removeClass('oldActive');
-                $('.sp').fadeOut(0);
-                $('.active').fadeIn(0);
-                    
-                    
-                });
                 
             // écrire les trucs ici!! on est encore dans document ready
         });

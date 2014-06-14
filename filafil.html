@@ -3,31 +3,48 @@
 
 <div id="container" class="clearfix">
     {{> menu }}
+    {{> balle-noir }}
 </div>
 
-<div class="sous-menu-pages">
-    <a href=""><p>Fil à Fil</p></a>
-    <a href="#trads"><p>Traductions</p></a>
-    <a href="#makingof"><p>Making Of</p></a>
-    <a href="#videos"><p>Vidéos</p></a>
-    <a href="#presse"><p>Presse</p></a>
-    <a href="#secrets"><p>Petits secrets</p></a>
+
+<div class="sous-menu-livres screen-only">
+    <div class="menuhover">
+    <a class="livre-button" id="livre-cover-toggle"><img src="/icones/couverture.png" class="menuhighlight"><img src="/icones/couverture-sans.png" class="menubase"></a>
+    </div>
+    <div class="menuhover">
+    <a class="livre-button" id="livre-pages-toggle"><img src="/icones/pages.png" class="menuhighlight"><img src="/icones/pages-sans.png" class="menubase"></a>
+    </div>
+    <div class="menuhover">
+    <a class="livre-button" id="livre-croquis-toggle"><img src="/icones/croquis.png" class="menuhighlight"><img src="/icones/croquis-sans.png" class="menubase"></a>
+    </div>
+    <div class="menuhover">
+    <a class="livre-button" id="livre-details-toggle"><img src="/icones/details.png" class="menuhighlight"><img src="/icones/details-sans.png" class="menubase"></a>
+    </div>
+    <div class="menuhover">
+    <a class="livre-button" id="livre-idee-toggle"><img src="/icones/idee.png" class="menuhighlight"><img src="/icones/idee-sans.png" class="menubase"></a>
+    </div>
+    <div class="menuhover">
+    <a class="livre-button" id="livre-presse-toggle"><img src="/icones/presse.png" class="menuhighlight"><img src="/icones/presse-sans.png" class="menubase"></a>
+    </div>
+    <div class="menuhover">
+    <a class="livre-button" id="livre-traductions-toggle"><img src="/icones/traductions.png" class="menuhighlight"><img src="/icones/traductions-sans.png" class="menubase"></a>
+    </div>
+    <div class="menuhover">
+    <a href="javascript:if(window.print)window.print()"><img src="/icones/imprimer.png" class="menuhighlight"><img src="/icones/imprimer-sans.png" class="menubase"></a>
+    </div>
 </div>
 
 <div class="fondsblanc"></div>
 
 <div class="livres">
 
-<div style="text-align: center; padding-bottom: 150px; font-size: 50px">
+<div class="titre-livre">
 <p>Fil à Fil</p>
 </div>
 
-<div class="livre-cover">
+<div class="livre-section livre-cover">
 <img src="/livres/Filafil.jpg">
-</div>
-
-
-<p class="livre-details-texte">
+<p class="livre-description">
 <a href="http://www.ecoledesloisirs.fr/php-edl/catalogues/fiche-livre-nvo.php?reference=E136427">L’École des Loisirs</a>, 2013<br>
 Collection : Pastel<br>
 11,50 €  (EAN13 : 9782211213912)<br>
@@ -35,11 +52,26 @@ Tout carton<br>
 <br>
 Le cocon de Maman araignée repose bien à l’abri sur sa toile. Les bébés araignées vont bientôt sortir. Toute petite et bien attachée à son fil, la petite araignée part découvrir le monde. Ouh là! Ouf! Maman araignée remonte le fil dès qu’un danger surgit. Miam! Bébé araignée a faim mais l’oiseau aussi a faim. Ouf! Maman est encore là!
 </p>
+</div>
 
-<div class="spreads">
+
+<div class="livre-section livre-croquis hidden">CROQUIS</div>
+
+<div class="livre-section livre-details hidden">DETAILS</div>
+<div class="livre-section livre-idee hidden">IDEE</div>
+<div class="livre-section livre-pages spreads hidden">
     <img src="/livres/filafil/Filafil4.jpg">
     <img src="/livres/filafil/Filafil11.jpg">
 </div>
+<div class="livre-section livre-presse hidden">PRESS</div>
+<div class="livre-section livre-traductions hidden">TRADUCTIONS</div>
+
+
+
+<!--
+
+
+
 
 
 <p style="color: white; text-align: center; padding-top: 50px; padding-bottom: 70px; clear: both">documents</p>
@@ -66,6 +98,8 @@ Liens vers des sites?
 
 <a id="secrets"><div class="sections-livres">PETITS SECRETS</div></a>
 Le cocon de Maman araignée repose bien à l’abri sur sa toile. Les bébés araignées vont bientôt sortir. Toute petite et bien attachée à son fil, la petite araignée part découvrir le monde. Ouh là! Ouf! Maman araignée remonte le fil dès qu’un danger surgit. Miam! Bébé araignée a faim mais l’oiseau aussi a faim. Ouf! Maman est encore là!
+
+-->
 
 
 </div> <!-- end div livres -->
