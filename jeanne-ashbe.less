@@ -84,7 +84,7 @@ a, a:visited, a:active, a:link {
     color: black;
 }
 a:hover {
-    font-style: italic; 
+    color: #495182;
     text-decoration: none;
 }
 
@@ -203,14 +203,6 @@ li {
     list-style-type: none;
 }
 
-
-/*.content {
-    float: left;
-    padding: 20px;
-    width: 70%;
-    margin: 15%
-}/*
-
 /* TITRES */
 .titres {
     width: 250px; 
@@ -229,12 +221,8 @@ li {
     left: 50%; 
     margin-left: -400px;
     padding-bottom: 100px;
-    padding-left: 50px;
-    padding-right: 50px;
-    img {
-        width:700px;
-        margin-top:20px;
-    }
+    padding-left: 40px;
+    padding-right: 40px;
     font-size: 25px;
     line-height: 30px;
 }
@@ -247,6 +235,22 @@ li {
     padding-bottom: 100px;
     padding-left: 50px;
     padding-right: 50px;
+    font-size: 25px;
+    line-height: 30px;
+}
+.sous-menu-centre {
+    position: absolute; 
+    height: 100%;
+    width: 800px;
+    left: 50%; 
+    margin-left: -400px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    img {
+        width:700px;
+        margin-top:20px;
+    }
     font-size: 25px;
     line-height: 30px;
 }
@@ -264,6 +268,8 @@ li {
 }
 
 /*LIVRES*/
+
+/*BIBLIOTHEQUE*/
 .bibliotheque {
     width: 800px;
     height: 600px;
@@ -326,34 +332,14 @@ li {
     clear: both;
     padding-top: 50px;
 }
-.bibliography {
-    font-size: 25px;
-    line-height: 34px;
-    color: black;
-    position: absolute;
-    width: 800px; 
-    top: 50%; 
-    left: 50%; 
-    margin-top: -315px; 
-    margin-left: -400px; 
-    padding: 50px 30px 30px 50px;
+
+/*BIBLIOGRAPHIE*/
+.bibliographie {
+    margin-bottom: 100px;
 }
-.bibliography a {
-    color: black;
-}
-.bibliography a:hover {
-    color: white;
-}
-.biblio-legende {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: @bookswidth;
-    background-color: white;
-    color: black;
-    padding: 10px;
-    font-size: 25px;
-    letter-spacing: 2px;
+.bibliographie-series {
+    text-align: center;
+    padding-bottom: 25px;
 }
 .prix {
     font-size: 15px; 
@@ -395,12 +381,6 @@ li {
     left: 50%; 
     margin-left: -400px; 
     padding: 20px 30px 30px 50px;
-    a {
-        color: black;
-    }
-    a:hover {
-        color: black;
-    }
 }
 .livre-cover {
 
@@ -419,12 +399,28 @@ li {
 .spreads img {
     margin-top: 40px;
     margin-bottom: 40px;
+    margin-left: 100px;
     width: 500px;
 }
 .sections-livres {
     padding-top: 20px;
     height: 100px;
     clear: both;
+}
+
+/*AFFICHES*/
+.bloc-affiches-small {
+    clear: both;
+}
+.affiche-small {
+    width: 220px;
+    height: 320px;
+    margin-right: 20px;
+    padding-top: 10px;
+    float: left;
+    img {
+        height: 300px;
+    }
 }
 
 /* LIENS */
@@ -435,10 +431,10 @@ li {
 
 /* IMAGES */
 .big-image {
-    margin: 10px 20px 20px 0px;
-    width: 700px;
-    height: 500px;
-    background-color: blue;
+    img {
+        width: 720px;
+        margin-top: 50px;
+    }
 }
 
 /*only on the screen*/
@@ -455,6 +451,9 @@ li {
 /*only in print*/
 
 @media print {
+    body {
+        background-color: white;
+    }
     .no-print {
         display:none;
     }
