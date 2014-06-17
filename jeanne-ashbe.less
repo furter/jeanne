@@ -60,10 +60,10 @@ div {
 
 
 body {
-    font-family:'Helvetica', 'Arial', sans-serif;
-    font-size: 25px;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
     letter-spacing: 1px;
-    line-height: 35px;
     background-color: #495182;
     color: black;
 }
@@ -93,8 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-family: 'Helvetica';
-    font-size: 16px;
+
 }
 li {
     list-style-type: none;
@@ -223,8 +222,6 @@ li {
     padding-bottom: 100px;
     padding-left: 40px;
     padding-right: 40px;
-    font-size: 25px;
-    line-height: 30px;
 }
 .menu-centre {
     position: absolute; 
@@ -349,12 +346,6 @@ li {
 /*PAGE LIVRE*/
 
 .sous-menu-livres {
-    position: fixed;  
-    top: 30px; 
-    right: 40px;
-    width: 80px;
-    padding-top: 20px;
-    margin-right: 60px;
     img {
         position: relative;
         height: 60px;
@@ -362,22 +353,25 @@ li {
     .menuhover {
         text-align: center;
     }
+    div {
+        float: left;
+        width: 88px;
+        margin-bottom: 30px;
+    }
 }
 .livre-button {
     cursor: pointer;
 }
 .titre-livre {
     text-align: center; 
-    padding-bottom: 50px; 
+    padding-bottom: 40px; 
     font-size: 50px;
+    clear: both;
 }
 .livres {
-    font-size: 25px;
-    line-height: 34px;
-    color: black;
     position: absolute;
     width: 800px; 
-    top: 30px; 
+    top: 10px; 
     left: 50%; 
     margin-left: -400px; 
     padding: 20px 30px 30px 50px;
@@ -386,8 +380,6 @@ li {
 
 }
 .livre-description {
-    font-size: 22px;
-    line-height: 26px;
     margin-top: 20px;
 }
 .livre-cover img {
@@ -402,11 +394,13 @@ li {
     margin-left: 100px;
     width: 500px;
 }
-.sections-livres {
-    padding-top: 20px;
-    height: 100px;
-    clear: both;
+.livre-section {
+    iframe {
+        margin-left: 140px;
+        margin-top: 50px;
+    }
 }
+
 
 /*AFFICHES*/
 .bloc-affiches-small {
@@ -427,6 +421,18 @@ li {
 .img-ref p {
     padding-top: 10px;
     width: 600px;
+}
+/* VIDEOS */
+.videos {
+    margin-top: 50px;
+    iframe {
+        margin: 20px;
+    }
+}
+.videos-titre {
+    text-align: center;
+    padding-bottom: 25px;
+    text-transform: uppercase;
 }
 
 /* IMAGES */
@@ -454,7 +460,7 @@ li {
     body {
         background-color: white;
     }
-    .no-print {
+    .screen-only {
         display:none;
     }
     .bibliography {
