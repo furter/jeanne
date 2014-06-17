@@ -23,9 +23,6 @@ if (Meteor.isClient) {
             console.log(templateName, context);
             
             // BACKGROUND COLOR ON PAGES LIVRES
-            if (templateName.indexOf("main") === 0) {
-                $('body').addClass('background-black');
-            }
             if (templateName.indexOf("bio-videos") === 0) {
                 $('body').addClass('background-black');
             }
@@ -128,7 +125,14 @@ if (Meteor.isClient) {
                 $(".active").show();
             });
             
-            
+            // MENU ACCORDEON
+            var allPanels = $('.accordion > dd').hide();
+    
+            $('.accordion > dt > a').click(function() {
+                allPanels.slideUp();
+                $(this).parent().next().slideDown();
+                return false;
+            });
                 
             // écrire les trucs ici!! on est encore dans document ready
         });

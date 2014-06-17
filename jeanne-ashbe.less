@@ -60,9 +60,9 @@ div {
 
 
 body {
-    font-family: 'Arial', 'Helvetica', sans-serif;
-    font-size: 18px;
-    line-height: 24px;
+    font-family: 'Arial', 'Helvetica', "sans-serif";
+    font-size: 16px;
+    line-height: 22px;
     letter-spacing: 1px;
     background-color: #495182;
     color: black;
@@ -109,6 +109,15 @@ li {
 .menuhighlight {
     display: none;
 }
+.fonds-noir {
+    position: fixed; 
+    height: 100%; 
+    width: 100%; 
+    top: 0; 
+    left: 0;
+    background-color: black;
+    z-index: -2;
+}
 .carre-bleu {
     position: fixed; 
     height: 625px; 
@@ -121,6 +130,11 @@ li {
     background-color: #495182;
 }
 /* LANGUAGE SELECTION */ 
+.select_language {
+    position: absolute; 
+    top: -10px; 
+    right: 0px;
+}
 .select_language li {
     font-size: 15px;
     line-height: 20px;
@@ -172,7 +186,7 @@ li {
     color: white;
 }
 
-/* MENU RESPONSIVE */
+/* MENU RESPONSIVE SMALL */
 .menu-alt {
     padding-top: 10px;
     width: 100%;
@@ -190,16 +204,13 @@ li {
     padding-top: 10px;
     text-transform: uppercase;
 }
-.menu-alt .select_language {
-    position: absolute;
-    bottom: -60px;
-    right: -10px;
-}
-.menu-alt .select_language li {
-    color: white;
-    margin: 10px;
-    font-size: 20px;
-    list-style-type: none;
+.accordion {
+   margin: 50px;   
+   dt {
+      p {
+          color: white;
+      }
+   }
 }
 
 /* TITRES */
@@ -262,6 +273,13 @@ li {
 /*BIO*/
 .bio {
     padding-top: 50px;
+    img {
+        width:500px; 
+        margin: 40px 0 10px 0;
+    }
+}
+.issuuembed {
+    margin-left: 160px;
 }
 
 /*LIVRES*/
@@ -323,11 +341,6 @@ li {
     position: absolute;
     bottom: 0px;
     left: 0px;
-}
-.intertitres {
-    width: 100%;
-    clear: both;
-    padding-top: 50px;
 }
 
 /*BIBLIOGRAPHIE*/
@@ -480,7 +493,6 @@ li {
 @media screen and (min-width: 400px) {
     .menu-alt {
         visibility: hidden;
-        position: absolute;
         left:-1000;
     }
 }
@@ -489,28 +501,31 @@ li {
 
 @media screen and (max-width: 400px) {
     .select_language {
-    position: relative;
-    }
-    .select_language li {
-        font-size: 35px;
+        position: relative;
+        left: 50%;
+        margin-left: -37px;
     }
     .menu {
         background-color: #495182;
-        visibility: hidden; 
+        visibility: hidden;
+    }
+    #volant {
+        display: none;
     }
     .menu-alt {
         visibility: visible;
+        margin-bottom: 30px;
     }
     .menu-alt a {
         color: black;
     }
     .carre-bleu {
-        height:100%;
-        top: 0px;
-        margin-top:0px;
+        width: 400px;
+        visibility: hidden;
     }
-    .titres-livres {
-        position: relative;
+    .fonds-noir {
+        width: 100px;
+        visibility: hidden;
     }
     .books {
         position: relative; 
@@ -525,62 +540,24 @@ li {
         float: none;
         margin: auto;
     }
-    .bibliography {
-        width: 330px;
-        margin: auto;
-        font-size: 28px;
-        padding-top: 0px;
-    }
-    .titre-livres {
-        width: 150px; 
-        margin: 80px 0 20px 0;
-    }
-    .bouton-livres-liste {
-        text-align: center;
-        float: none;
-        margin: auto; 
-        height: 50px;
-    }
-    .bouton-livres-biblio {
-        text-align: center;
-        float: none;
-        margin: auto; 
-        height: 60px;
-    }
-    .bouton-livres-biblio-off {
-        color: white;
-    }
-    .printer-icon {
-        visibility: hidden;
-    }
-    .intertitres {
-        width: 330px;
-        margin: auto;
-        font-size: 28px;
-    }
     .contenu-centre {
         position: relative; 
-        width: 100%;
-        top: 0; 
+        width: 80%;
+        top: 30px; 
         left: 0; 
-        margin-top: 120px; 
-        margin-left: 0px;
-        padding-left: 0px;
+        padding: 0px 0px 0px 0px;
+        margin: auto;
     }
     .contenu-centre img {
         width: 80%;
         margin-left: 10%;
         margin-bottom:20px;
     }
-    .bio {
-        width: 330px;
-        margin: auto;
-        font-size: 28px;
-        line-height: 30px;
-        padding-top: 0px;
+    .issuuembed {
+        margin-left: 0px;
     }
-    .bio img {
-        width: 330px;
-        margin: auto;
+    .affiche-small {
+        visibility: hidden;
+        position: absolute;
     }
 }
