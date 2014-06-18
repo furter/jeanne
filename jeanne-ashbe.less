@@ -73,6 +73,7 @@ body {
 }
 .container {
     margin-bottom: 50px;
+    z-index: -1000;
 }
 
 p {
@@ -100,15 +101,6 @@ li {
 }
 
 /* MENU ACCUEIL (DESSIN) */ 
-.menu {
-    
-}
-.menuhover img {
-    position: absolute;
-}
-.menuhighlight {
-    display: none;
-}
 .fonds-noir {
     position: fixed; 
     height: 100%; 
@@ -128,6 +120,18 @@ li {
     margin-left: -400px; 
     z-index:-1; 
     background-color: #495182;
+}
+.menu {
+    z-index: 100;
+}
+.menuhover img {
+    position: absolute;
+}
+.menuhighlight {
+    display: none;
+}
+.menu-alt {
+    z-index: -100;
 }
 /* LANGUAGE SELECTION */ 
 .select_language {
@@ -186,32 +190,7 @@ li {
     color: white;
 }
 
-/* MENU RESPONSIVE SMALL */
-.menu-alt {
-    padding-top: 10px;
-    width: 100%;
-}
-.menu-alt a {
-    color: black;
-}
-.menu-alt p {
-    text-align: center;
-    padding-top: 10px;
-    text-transform: uppercase;
-}
-.menu-alt li {
-    text-align: center;
-    padding-top: 10px;
-    text-transform: uppercase;
-}
-.accordion {
-   margin: 50px;   
-   dt {
-      p {
-          color: white;
-      }
-   }
-}
+
 
 /* TITRES */
 .titres {
@@ -494,16 +473,34 @@ li {
     .menu-alt {
         visibility: hidden;
         left:-1000;
+        display: none;
     }
 }
 
 /* SMALL SCREENS ONLY (SMARTPHONES) */
 
 @media screen and (max-width: 400px) {
+    .big-screen-only {
+        visibility: hidden;
+    }
     .select_language {
         position: relative;
         left: 50%;
         margin-left: -37px;
+    }
+    .fondsblanc {
+        visibility: hidden;
+    }
+    p {
+        color: white;
+    }
+    a, a:visited, a:active, a:link { 
+        text-decoration: none;
+        color: white;
+    }
+    a:hover {
+        color: black;
+        text-decoration: none;
     }
     .menu {
         background-color: #495182;
@@ -512,12 +509,43 @@ li {
     #volant {
         display: none;
     }
+    /* MENU RESPONSIVE SMALL */
     .menu-alt {
+        display: block;
+        padding-top: 10px;
+        width: 100%;
+        z-index: -100;
         visibility: visible;
         margin-bottom: 30px;
     }
     .menu-alt a {
         color: black;
+    }
+    .menu-alt p {
+        text-align: center;
+        padding-top: 10px;
+        text-transform: uppercase;
+    }
+    .menu-alt li {
+        text-align: center;
+        padding-top: 10px;
+        text-transform: uppercase;
+    }
+    .accordion {
+       margin: 50px;   
+       dt {
+          p {
+              color: white;
+          }
+       }
+       dd {
+          p {
+              text-transform: none;
+          }
+          a {
+              color: white;
+          }
+       }
     }
     .carre-bleu {
         width: 400px;
@@ -526,6 +554,52 @@ li {
     .fonds-noir {
         width: 100px;
         visibility: hidden;
+    }
+    .contenu-centre {
+        position: relative; 
+        width: 80%;
+        top: 20px; 
+        left: 0; 
+        padding: 0px 0px 0px 0px;
+        margin: auto;
+    }
+    .contenu-centre img {
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom:20px;
+    }
+    .livres {
+        position: relative; 
+        width: 80%;
+        top: 30px; 
+        left: 0; 
+        padding: 0px 0px 0px 0px;
+        margin: auto;
+    }
+    .sous-menu-livres {
+        margin-top: -20px;
+        height: 170px;
+        margin-left: 20px;
+        div {
+            width: 65px;
+            margin-bottom: 10px;
+        }
+    }
+    .titre-livre {
+        p {
+            line-height: 48px;
+        }
+    }
+    .livre-section img {
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom:20px;
+    }
+    .livre-section iframe {
+        width: 80%;
+        height: 80%;
+        margin-left: 10%;
+        margin-bottom:10px;
     }
     .books {
         position: relative; 
@@ -540,18 +614,13 @@ li {
         float: none;
         margin: auto;
     }
-    .contenu-centre {
-        position: relative; 
-        width: 80%;
+    .bookshelf {
+        position: absolute;
+        width: 800px; 
         top: 30px; 
-        left: 0; 
-        padding: 0px 0px 0px 0px;
-        margin: auto;
-    }
-    .contenu-centre img {
-        width: 80%;
-        margin-left: 10%;
-        margin-bottom:20px;
+        left: 50%; 
+        margin-left: -400px; 
+        padding-left: 0px;
     }
     .issuuembed {
         margin-left: 0px;
