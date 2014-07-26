@@ -31,11 +31,13 @@ if (Meteor.isClient) {
             }
             
             Session.set('currentPage', templateName);
-            var frag = Meteor.render(function () {
-                var i = Template[templateName] ? Template[templateName](context) : "";
-                return i;
-            });
-            $('div#container').html(frag);
+            var tmpl = Template[templateName];
+            if (typeof tmpl === "undefined") {
+                this.navigate('/'); //if the template is not found, go to home page
+                return;
+            }
+            var frag = context ? UI.renderWithData(tmpl, context) : UI.render(tmpl);
+            UI.insert(frag, document.getElementById("container"));
         },
         templateLivres: function (titre, date) {
             Session.set("titre", titre);
