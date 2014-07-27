@@ -22,7 +22,7 @@ Template.affiches_content.events = {
         if (confirmed){
             console.log("trying to remove", id);
         }
-        //Affiches.remove(id);
+        Affiches.remove(id);
     },
     'click button.show': function(e) {
         var id = e.target.getAttribute("rel");
