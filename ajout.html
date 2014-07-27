@@ -1,9 +1,15 @@
 <template name="ajout">
 
-<div style="margin:100px; color: white; font-size: 30px; letter-spacing: 2px; line-height: 45px">
+<div class="contenu-centre">
+<div style="margin-top:100px; font-size: 30px; letter-spacing: 2px; line-height: 35px">
+Pour modifier le site (ajouts, supressions, etc), il faut se connecter:<br><br>
 {{> loginButtons}}
 
+<br><br>Et pour retourner au mode “visiteur”, il faut se déconnecter, puis <a href="/">retourner dans le site</a>.
+
 {{#if currentUser}}
+
+
 
 <!--
 Je voudrais ajouter: 
@@ -52,6 +58,8 @@ Je voudrais ajouter:
 
 
 {{/if}}
+
+</div>
 
 </div>
 

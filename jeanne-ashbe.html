@@ -6,9 +6,12 @@
 </head>
 
 <body>
-    
-   
     <div id="container" class="clearfix">
+        {{#if currentUser}}
+<div class="welcome-admin">HELLO JEANNE, <br>TU ES EN MODE ADMINISTRATION!<br><br>
+&#8594; <a href="/" style="border-bottom: 1px solid black">TU PEUX ALLER DANS LES PAGES DU SITE POUR LES MODIFIER</a><br><br>
+&#8594; <a href="/ajout" style="border-bottom: 1px solid black">RETOUR AU MODE “VISITEUR” PAR ICI…</a></div>
+{{/if}}
         {{> template }}
     </div>
 
