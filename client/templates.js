@@ -22,7 +22,7 @@ Template.affiches_content.events = {
         if (confirmed){
             console.log("trying to remove", id);
         }
-        //Affiches.remove(id);
+        Affiches.remove(id);
     },
     'click button.show': function(e) {
         var id = e.target.getAttribute("rel");
@@ -33,5 +33,26 @@ Template.affiches_content.events = {
         var id = e.target.getAttribute("rel");
         console.log("trying to hide", id);
         Photos.update(id, {"$set": {"processed": false}});
+    },
+    'click button[type=submit]' : function(e) {
+        e.preventDefault();
+        $form = $(e.target).closest("form");
+        $input = $form.find("input[type=file]");
+        console.log($input);
+        $input.each(function(i, el) {
+            console.log(el);
+            _.each(el.files, function(file) {
+                var name = file.name; // FIXME try if we can encodeuricomponent it
+                Meteor.saveFile(file, name, function() {
+                    // FIXME we should only fire the callback if it’s the latest file of the latest file input
+                    context = {
+                        "img_name" : name,
+                        "published": $form.find("input[type=date]")[0].value
+                     };
+                    updateItem(Affiches, context);
+                });
+                // var 
+            });
+        });
     }
 };
