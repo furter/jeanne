@@ -14,17 +14,23 @@
 
 <div class="bloc-affiches-small">
     {{#each affiches}}
-        <a href="#{{ id }}">
+        
         <div class="affiche-small">
+            {{#if currentUser}}
+            <div class="modify"><div class="delete" rel="{{_id}}">&#10005;</div> <div class="edit" rel="{{_id}}">&#9998;</div></div>
+            {{/if}}
+            <a href="#poster-{{ _id }}">
             <img src="/affiches/{{ img_name }}">
+            </a>
         </div>
-        </a>
+        
+        
     {{/each}}
 </div>
 
 <div class="big-image">
     {{#each affiches}}
-        <a id="{{ id }}">
+        <a id="poster-{{ _id }}">
             <img src="/affiches/{{ img_name }}">
         </a>
     {{/each}}

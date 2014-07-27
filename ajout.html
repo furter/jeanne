@@ -1,11 +1,11 @@
 <template name="ajout">
 
 <div style="margin:100px; color: white; font-size: 30px; letter-spacing: 2px; line-height: 45px">
+{{> loginButtons}}
 
 {{#if currentUser}}
 
-<button type="button" class="logout">Déconnexion</button><br><br>
-
+<!--
 Je voudrais ajouter: 
 <select name="categorie" style="height:30px">
     <option value="livre">livre</option>
@@ -18,7 +18,7 @@ Je voudrais ajouter:
 </select>
 <br><br>
 
-<!-- LIVRES -->
+
 
 <form class="ajout-form">
     <span>Titre:</span>
@@ -36,7 +36,7 @@ Je voudrais ajouter:
     <br><button type="button" clqss="submit">Envoyer!</button>
 </form>
 
-<!-- DESSINS -->
+
 <form class="ajout-form">
     <span>Titre:</span>
     <input id="form-image-titre" class="required"><br>
@@ -48,16 +48,8 @@ Je voudrais ajouter:
     <textarea id="form-image-description" type="text" name="form-description" class="required" style="width:400px; height:200px"></textarea>
     <br><button type="button" clqss="submit">Envoyer!</button>
 </form>
+-->
 
-
-
-{{else}}
-
-<form class="login-form">
-    <p>Mot de passe:</p>
-    <input id="password" type="password" name="password" maxlength="100" class="required"><br>
-    <button type="button" clqss="submit">Envoyer!</button>
-</form>
 
 {{/if}}
 
