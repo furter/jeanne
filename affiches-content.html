@@ -10,11 +10,12 @@
 <div class="contenu-centre">
 
 {{#if currentUser}}
-<div class="add">&#43; AJOUTER UN ÉLÉMENT</div>
+<div class="add">AJOUTER UN ÉLÉMENT</div>
 <form id="new">
         <input type="file" />
         <input type="date" />
-        <button type="submit">Enregistrer la nouvelle image</button>
+        <button type="submit"><p class="progression-bar-text">Importer l’image</p><img src="/animated-progression-bar/anim.gif" class="progression-bar"></button>
+        
 </form>
 {{/if}}
 
@@ -40,6 +41,7 @@
     {{/each}}
 </div>
 
+<!--
 <div class="big-image">
     {{#each affiches}}
         <a id="poster-{{ _id }}">
@@ -48,6 +50,7 @@
     {{/each}}
 
 </div>
+-->
 
 </div> <!-- end div centre -->
 

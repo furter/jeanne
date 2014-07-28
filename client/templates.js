@@ -37,23 +37,32 @@ Template.affiches_content.events = {
     'click button[type=submit]' : function(e) {
         e.preventDefault();
         $form = $(e.target).closest("form");
-        $input = $form.find("input[type=file]");
-        console.log($input);
-        $input.each(function(i, el) {
-            console.log(el);
+        $fileInputs = $form.find("input[type=file]");
+        var files = [];
+        $fileInputs.each(function(i, el) {
             _.each(el.files, function(file) {
-                var name = file.name; // FIXME try if we can encodeuricomponent it
-                Meteor.saveFile(file, name, "affiches", function() {
-                    // Now we are in the callback function: the function that is called when
-                    // uploading the file is completed succesfully
-                    // FIXME we should only fire the callback if it’s the latest file of the latest file input
-                    context = {
-                        "img_name" : name,
-                        "published": $form.find("input[type=date]")[0].value
-                    };
-                    // put in the database:
-                    Affiches.insert(context);
-                });
+                files.push(file);
+            });
+        });
+        if (files.length === 0) {
+            return;
+        }
+        $(".progression-bar").show();
+        $(".progression-bar-text").hide();
+        _.each(files, function(file) {
+            var name = file.name; // FIXME try if we can encodeuricomponent it
+            Meteor.saveFile(file, name, "affiches", function() {
+                // Now we are in the callback function: the function that is called when
+                // uploading the file is completed succesfully
+                // FIXME we should only fire the callback if it’s the latest file of the latest file input
+                context = {
+                    "img_name" : name,
+                    "published": $form.find("input[type=date]")[0].value
+                };
+                $(".progression-bar").hide();
+                $(".progression-bar-text").show();
+                // put in the database:
+                Affiches.insert(context);
             });
         });
     }
