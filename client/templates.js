@@ -43,15 +43,17 @@ Template.affiches_content.events = {
             console.log(el);
             _.each(el.files, function(file) {
                 var name = file.name; // FIXME try if we can encodeuricomponent it
-                Meteor.saveFile(file, name, function() {
+                Meteor.saveFile(file, name, "affiches", function() {
+                    // Now we are in the callback function: the function that is called when
+                    // uploading the file is completed succesfully
                     // FIXME we should only fire the callback if it’s the latest file of the latest file input
                     context = {
                         "img_name" : name,
                         "published": $form.find("input[type=date]")[0].value
-                     };
-                    updateItem(Affiches, context);
+                    };
+                    // put in the database:
+                    Affiches.insert(context);
                 });
-                // var 
             });
         });
     }
