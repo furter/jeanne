@@ -10,7 +10,12 @@
 <div class="contenu-centre">
 
 {{#if currentUser}}
-<div class="modify"><div class="add">&#43; AJOUTER UN ÉLÉMENT</div></div>
+<div class="add">&#43; AJOUTER UN ÉLÉMENT</div>
+<form id="new">
+        <input type="file" />
+        <input type="date" />
+        <button type="submit">Enregistrer la nouvelle image</button>
+</form>
 {{/if}}
 
 <div class="titres">
@@ -18,11 +23,7 @@
 
 <div class="bloc-affiches-small">
     
-    <form id="new">
-        <input type="file" />
-        <input type="date" />
-        <button type="submit">Submit new image</button>
-    </form>
+    
     
     {{#each affiches}}
         
